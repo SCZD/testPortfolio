@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@font-face {
+    font-family: "Rosseta";
+    src: url("../fuentes/Rosseta.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Calypso";
+    src: url("../fuentes/Calypso.ttf") format("truetype");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #232533;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    padding: 0 18px 150px 18px;
+    color: antiquewhite;
+}
+
+/*
+    al padre poner display flex y column automaticamnte todo el width
+    de los hijos es del 100% pero si pones align item center
+    aunque haya no cuenta como 100% por tanto a un nieto aunque pongas 100% 
+    no se vera lo que hay que hacer es darle 100% a su padre (no el padre del display flex 
+    que desde esta referencia es abuelo) y entonces ya si funciona.
+
+    Pero si quitas align item center si puedes quitar el width al padre y el hijo ya si le
+    funcionaria el width 100%
+
+    Pero si dejas el align item center y no quieres darle al hijo de padre 100% puedes 
+    darle al nieto vw entonces ahi si funcinaria
+
+*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 50px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+ul > li{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a{
+    text-decoration: none;
+    color: antiquewhite;
+    opacity: 0.4;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+    padding: 2px 0;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+   opacity: 1;
+}
+
+#activo{
+    opacity: 1;
+}
+
+article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(220, 218, 218);
+    margin-bottom: 12px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width:800px) {
+    body{
+        padding: 0 30px 100px 30px;
+    }
+    header{
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    ul > li{
+        margin-left: 24px;
+    }
+    nav, ul {
+        flex-direction: row;
+    }
+
+    body #efectoAro{
+        min-width: 350px;
+        height: 350px;
+    }
+
+    body #efectoAro::after{
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+
+@media (min-width:1400px) {
+    body{
+        padding: 0 250px 100px 250px;
+    }
+
+    body #efectoAro{
+        min-width: 450px;
+        height: 450px;
+    } 
+
+    body #efectoAro::after{
+        top: 23px;
+        left: 23px;
+        right: 23px;
+        bottom: 23px;
+    }
+}
+
+@media (min-width:1900px) {
+    body{
+        padding: 0 300px 40px 300px;
+    }
+
+    body #efectoAro{
+        min-width: 550px;
+        height: 550px;
+    } 
+
+    body #efectoAro::after{
+        top: 26px;
+        left: 26px;
+        right: 26px;
+        bottom: 26px;
+    }
+}

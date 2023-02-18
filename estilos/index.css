@@ -1,0 +1,256 @@
+#flor{
+    background-color: transparent;
+}
+
+#efectoAro{
+    min-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient( #ffffff 0%, #ffffff 52%, #ffffff 90%);
+    animation: girarImagen 5s linear infinite;
+    align-self: center
+}
+
+#efectoAro span:nth-child(1){
+    filter: blur(5px);
+}
+
+#efectoAro span:nth-child(2){
+    filter: blur(25px);
+}
+
+#efectoAro span:nth-child(3){
+    filter: blur(30px);
+}
+
+#efectoAro span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /*background-image: linear-gradient( #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);*/
+    background-image: linear-gradient( #fbd9ac 0%, #ffffff 52%, #fbd9ac 90%);
+}
+
+#efectoAro::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: url(https://avatars2.githubusercontent.com/u/42417471?s=400&u=16a6b54…&v=4) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    animation: efectoNeon 5s linear infinite;
+}
+
+@keyframes girarImagen {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes efectoNeon {
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+#flor{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#flor div:nth-child(2){
+    margin-top: 20px;
+    font-size: 2.6rem;
+}
+
+#flor div:nth-child(2) > p{
+    text-align: center;
+}
+
+#flor > p{
+    text-align: center;
+}
+
+blockquote{
+    padding: 0;
+    margin: 0;
+    line-height: 2.2rem;
+    font-size: 1.3rem;
+}
+
+#proyect > h2{
+    text-align: center;
+    font-family: 'Calypso';
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.proyecto{
+    position: relative;
+    border-radius: 28px;
+    transition: border-radius 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+    background-color: #faebd7;
+    margin-bottom: 40px;
+    padding: 15px 25px 25px 25px;
+}
+
+.proyecto > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto h2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.proyecto h2 > a{
+    text-decoration: none;
+    margin: 0;
+    font-size: 3rem;
+    font-family: "Rosseta";
+    letter-spacing: 0.3rem;
+    color: hsl(232, 19%, 17%);
+    z-index: 2;
+}
+
+.proyecto h3 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 25px;
+    font-family: "Rosseta";
+    font-size: 3rem;
+    color: hsl(232, 19%, 17%);
+}
+
+.proyecto > div:nth-child(2){
+    transition: all 1s ease;
+    overflow: hidden;
+    max-height: 0;
+    margin: 0;
+    line-height: 1.5rem;
+}
+
+.proyecto > div:nth-child(2) > p{
+    margin-top: 20px;
+    line-height: 2.1rem;
+    font-size: 1.4rem;
+    color: hsl(232, 19%, 17%);
+    font-weight: bold;
+}
+
+.proyecto > div:nth-child(2) img{
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.proyecto:target > div:nth-child(2){
+    max-height: 1000px;
+}
+
+.proyecto:target{
+    border-radius: 10px;
+}
+
+#tecnologias{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#tecnologias > h2{
+    text-align: center;
+    font-family: 'Calypso';
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+#tecnologias > div{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+}
+#tecnologias a{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    border: 3px solid #3d4059;
+    border-radius: 12px;
+}
+
+#tecnologias a:hover{
+    border-color: hsl(34, 78%, 91%);
+}
+#tecnologias img{
+    box-sizing: content-box;
+    height: 80px;
+    width: 80px;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(61, 64, 89);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (min-width:600px) {
+    #flor div:nth-child(2) > p{
+        text-align: center;
+        text-align: left;
+        margin-top: 50px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (min-width:800px) {
+    #tecnologias > div{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 80px;
+    }
+
+    body #flor{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+
+    #flor div:nth-child(2){
+        margin-top: 0;
+        margin-left: 50px;
+        width: 800px;
+    }
+
+    #flor div:nth-child(2) > p{
+        text-align: center;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    #flor div:nth-child(2) > blockquote{
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (min-width:1200px) {
+    #tecnologias > div{
+        grid-template-columns: repeat(5, 1fr);
+        gap: 80px;
+    }
+}
