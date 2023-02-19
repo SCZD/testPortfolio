@@ -10,6 +10,11 @@
     src: url("../fuentes/Calypso.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Icono";
+    src: url("../fuentes/icono.ttf") format("truetype");
+}
+
 *{
     box-sizing: border-box;
 }
@@ -114,6 +119,15 @@ footer{
     flex-direction: column;
 }
 
+.icono{
+    font-family: 'Icono';
+}
+
+span{
+    margin: 0;
+    padding: 0;
+}
+
 
 @media (min-width:800px) {
     body{
@@ -125,6 +139,7 @@ footer{
     }
     nav{
         justify-content: space-between;
+        margin-bottom: 30px;
     }
     ul > li{
         margin-left: 24px;
@@ -167,7 +182,7 @@ footer{
 
 @media (min-width:1900px) {
     body{
-        padding: 0 300px 40px 300px;
+        padding: 0 300px 80px 300px;
     }
 
     body #efectoAro{

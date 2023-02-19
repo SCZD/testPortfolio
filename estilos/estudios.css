@@ -1,0 +1,66 @@
+
+section{
+    background-color: transparent;
+}
+
+article > section{
+    /**/
+    border-left: 15px solid hsl(234, 19%, 29%);
+    padding-left: 50px;
+}
+
+section > h2{
+    font-size: 1.6rem;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Calypso';
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+#lineaTiempo > h2{
+    font-size: 2.6rem;
+    margin-left: -30px;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+#lineaTiempo > h2::before{
+   content: '';
+   font-family: 'Icono';
+   position: absolute;
+   left: -43px;
+   top: 6px;
+   color: hsl(34, 78%, 91%);
+   font-size: 2rem;
+}
+
+section > p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-top: 10px;
+}
+
+section > h2:not(.fecha){
+   margin-bottom: 20px;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+section > ul {
+    flex-direction: column;
+}
+body section > ul > li {
+    flex-direction: row;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+body section > ul > li > span{
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
