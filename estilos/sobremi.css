@@ -1,18 +1,7 @@
 article > section{
     background-color: transparent;
 }
-
-#perfilSobreMi {
-    align-items: center;
-    
-}
-            
-#perfilSobreMi > img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-}
-
+         
 section > h2{
     font-size: 2.1rem;
     margin-bottom: 0;
@@ -20,11 +9,127 @@ section > h2{
 
 section > p{
     font-size: 1.4rem;
-    margin-top: 20px;
+    line-height: 2rem;
+    margin-top: 30px;
 }
 
 section > img {
+    margin-top: 30px;
     border-radius: 10px;
 }
 
+/* Card */
 
+.tarjeta{
+    display: none;
+    position: relative;
+	border-radius: 10px; 
+	overflow: hidden;
+    width: 800px;
+    height: 250px;
+    align-self: center;
+    transition: box-shadow 0.4s ease;
+    margin-top: 50px;
+}
+
+#pseudovisible{
+    position: absolute;
+	width: 250px;
+	height: 100%;
+	z-index: 2;
+	transition: width 0.4s ease;
+	background: hsl(34, 78%, 91%);
+	overflow: hidden;
+    color: hsl(232, 19%, 17%);
+    border-radius: 10px; 
+}
+
+#visible{
+    position: absolute;
+	width: 550px; /* tarjeta - pseudovisible */
+    height: 100%;
+	left: 0;
+    top: 0;
+}
+
+#visible > img{
+    width: 250px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#invisible{
+    position: absolute;
+    width: 500px; /* tarjeta - visible era 550 pero al desplazarlo en 50 le restamos*/
+    height: 100%;
+    left: calc(250px + 50px); /* el width de pseudovisible + margin left*/
+
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+}
+
+#estatico{
+    width: 500px; /* tarjeta - pseudovisible eran 550 pero con la separacin de 50 le restamos*/
+    align-self: flex-end;
+    padding-right: 25px;
+}
+
+.tarjeta:hover #pseudovisible{
+    width: 100%;
+}
+
+.tarjeta:hover{
+    box-shadow: 1px 1px 30px #fbd9ac;
+}
+
+#estatico > p{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-top: 0;
+}
+
+#redesSociales > div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#redesSociales a{
+    text-decoration: none;
+    color: hsl(232, 19%, 17%);
+    font-size: 2.3rem;
+    margin-left: 20px;
+}
+
+#invisible > p{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin-top: 0;
+}
+
+article > img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    align-self: center;
+    margin-top: 50px;
+}
+
+article > h1{
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+
+iframe{
+    border-radius: 10px;
+}
+
+@media (min-width:900px){
+    .tarjeta{
+        display: flex;
+    }
+    article > img,  article > h1{
+        display: none;
+    }
+}
