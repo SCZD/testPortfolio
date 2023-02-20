@@ -3,12 +3,12 @@
 }
 
 #efectoAro{
-    min-width: 200px;
-    height: 200px;
+    min-width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-image: linear-gradient( #ffffff 0%, #ffffff 52%, #ffffff 90%);
-    animation: girarImagen 3s linear infinite;
-    align-self: center
+    animation: efectoNeon 3s linear infinite;
+    align-self: center;
 }
 
 #efectoAro span:nth-child(1){
@@ -42,23 +42,24 @@
     background: url(https://avatars2.githubusercontent.com/u/42417471?s=400&u=16a6b54…&v=4) no-repeat center;
     background-size: cover;
     border-radius: 50%;
-    animation: efectoNeon 3s linear infinite;
+    animation: girarImagen 3s linear infinite;
 }
 
 @keyframes girarImagen {
 	0%{
-		transform: rotate(0deg);
+		transform: rotate(360deg);
 	}
 	100%{
-		transform: rotate(360deg);
+		transform: rotate(0deg);
 	}
 }
 @keyframes efectoNeon {
-	0%{
-		transform: rotate(360deg);
+	
+    0%{
+		transform: rotate(0deg);
 	}
 	100%{
-		transform: rotate(0deg);
+		transform: rotate(360deg);
 	}
 }
 
@@ -199,6 +200,7 @@ blockquote{
 #tecnologias a:hover{
     border-color: hsl(34, 78%, 91%);
 }
+
 #tecnologias img{
     box-sizing: content-box;
     height: 50px;
@@ -245,13 +247,18 @@ blockquote{
 #contacto > div :nth-child(1) input, #contacto > div :nth-child(1) textarea{
     outline: none;
     border-radius: 5px;
-    padding: 14px 5px 14px 5px;
+    padding: 14px 5px 14px 20px;
     font-size: 1.2rem;
     margin-bottom: 50px;
     border: none;
     background-color: #3d4059;
     color: #faebd7;
     resize: vertical;
+    height: 50px;
+}
+
+body #contacto > div :nth-child(1) textarea{
+    height: 200px;
 }
 
 #contacto > div :nth-child(1) input::placeholder{
@@ -301,7 +308,7 @@ blockquote{
 
 #contacto > div:nth-child(2) > div > div{
     display: flex;
-    padding-left: 100px;
+    padding-left: 30px;
 }
 
 #contacto > div:nth-child(2) > div > div > span{
@@ -333,6 +340,10 @@ blockquote{
     #tecnologias img{
         height: 80px;
         width: 80px;
+    }
+    #contacto > div:nth-child(2) > div > div{
+        display: flex;
+        padding-left: 100px;
     }
 }
 
